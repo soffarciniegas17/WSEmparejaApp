@@ -100,9 +100,9 @@ public class Home extends AppCompatActivity {
 
         dificultad.show();
         Button b1, b2, b3;
-         b1= findViewById(R.id.ba);
-         b2= findViewById(R.id.bb);
-         b3= findViewById(R.id.bc);
+         b1= dificultad.findViewById(R.id.ba);
+         b2= dificultad.findViewById(R.id.bb);
+         b3= dificultad.findViewById(R.id.bc);
 
 
          b1.setOnClickListener(new View.OnClickListener() {

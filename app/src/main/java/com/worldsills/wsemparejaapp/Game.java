@@ -2,6 +2,7 @@ package com.worldsills.wsemparejaapp;
 
 import android.app.Dialog;
 import android.content.ClipData;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.CountDownTimer;
 import android.os.SystemClock;
@@ -9,6 +10,8 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.Chronometer;
 import android.widget.GridView;
@@ -31,14 +34,14 @@ public class Game extends AppCompatActivity {
     private Chronometer viewChronometer;
 
     private int puntaje1, puntaje2, tiempoPartida, dificultad;
-
     private Long tiempoTemporizador;
-
     private String nomJugador1, nomJugador2;
 
 
     private final int TAPAR=R.drawable.fondo_tapar_item_carta;
     private final int DESTAPAR=android.R.color.transparent;
+
+    private Animation voltear, desaparecer;
 
 
     @Override
@@ -61,6 +64,7 @@ public class Game extends AppCompatActivity {
         turno=true;
         clickCarta=true;
         findViews();
+        cargaAnimaciones();
 
 
 
@@ -74,6 +78,13 @@ public class Game extends AppCompatActivity {
         viewPuntaje2=findViewById(R.id.game_puntaje2);
         viewChronometer=findViewById(R.id.game_chronometer);
         viewTemporizador=findViewById(R.id.game_temporizador);
+
+    }
+    public void cargaAnimaciones(){
+        voltear= AnimationUtils.loadAnimation(this,R.anim.voltear);
+        voltear.setFillAfter(true);
+        desaparecer=AnimationUtils.loadAnimation(this,R.anim.desaparecer);
+        desaparecer.setFillAfter(true);
 
     }
     //Metodo para organizar las cartas en el adapter
@@ -127,8 +138,14 @@ public class Game extends AppCompatActivity {
 
                 if (clickCarta){
 
+                    if (view1!=null && view2!=null){
+                        view1.clearAnimation();
+                        view2.clearAnimation();
+                    }
                     posicion1=position;
                     view1=view;
+
+                    view1.startAnimation(voltear);
 
                     cartas.get(posicion1).setFondoTapar(DESTAPAR);
 
@@ -137,6 +154,9 @@ public class Game extends AppCompatActivity {
 
                     posicion2=position;
                     view2=view;
+
+                    view1.clearAnimation();
+                     view2.startAnimation(voltear);
 
                     cartas.get(posicion2).setFondoTapar(DESTAPAR);
 
@@ -168,6 +188,9 @@ public class Game extends AppCompatActivity {
                     view1.setVisibility(View.INVISIBLE);
                     view2.setVisibility(View.INVISIBLE);
 
+                    view1.startAnimation(desaparecer);
+                    view2.startAnimation(desaparecer);
+
                     if (turno){
                         puntaje1+=100;
 
@@ -181,6 +204,9 @@ public class Game extends AppCompatActivity {
 
                     cartas.get(posicion1).setFondoTapar(TAPAR);
                     cartas.get(posicion2).setFondoTapar(TAPAR);
+
+                    view1.startAnimation(voltear);
+                    view1.startAnimation(voltear);
 
                     if (turno){
                         puntaje1-=2;
@@ -200,6 +226,8 @@ public class Game extends AppCompatActivity {
         }.start();
     }
     public void actualizarPantalla(){
+        viewJugador1.setText(nomJugador1);
+        viewJugador2.setText(nomJugador2);
         viewPuntaje1.setText(puntaje1+"");
         viewPuntaje2.setText(puntaje2+"");
 
@@ -271,12 +299,19 @@ public class Game extends AppCompatActivity {
         db.guardarDatos(nomJugador2,puntaje2,tiempoPartida,dificultad/2+"");
     }
     public void finalBotones(View v){
+        Intent intent;
         switch (v.getId()){
             case R.id.fin_bton_home:
+                intent=new Intent(this,Home.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.fin_bton_compartir:
                 break;
             case R.id.fin_bton_replay:
+                intent=new Intent(this,Game.class);
+                intent.putExtra("",dificultad/2);
+                finish();
                 break;
         }
 
@@ -311,13 +346,14 @@ public class Game extends AppCompatActivity {
             timerPartida();
         }
 
-
-        viewJugador1.setText(nomJugador1);
-        viewJugador2.setText(nomJugador2);
-
-
         turno=new Random().nextBoolean();
+        actualizarPantalla();
         cargaCartas();
+    }
+    public void onBackPressed(){
+        Intent intent=new Intent(this, Home.class);
+        startActivity(intent);
+        finish();
     }
 
 }

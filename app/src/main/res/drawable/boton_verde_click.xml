@@ -8,24 +8,10 @@
         <shape>
 
             <solid android:color="@color/verdeOscuro"/>
-            <corners android:radius="20dp"/>
+
         </shape>
     </item>
 
-
-    <item android:height="60dp"
-        android:width="60dp">
-
-
-        <shape>
-
-            <gradient android:angle="180"
-                android:startColor="@color/verdeOscuro"
-                android:endColor="@color/verdesuave"/>
-
-            <corners android:radius="20dp"/>
-        </shape>
-    </item>
 
 
     <item

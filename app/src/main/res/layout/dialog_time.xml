@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="270dp"
+    android:layout_gravity="center"
+    android:background="@color/fondo_oscuro"
     android:orientation="vertical">
 
 
@@ -12,6 +14,39 @@
         android:text="Ingresar tiempo"
         android:textAlignment="center"
         android:textSize="40dp" />
+
+
+    <EditText
+        android:layout_marginTop="30dp"
+        android:textSize="26dp"
+        android:layout_width="57dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center"
+        android:inputType="number"
+        android:text="30"
+        android:textColor="@android:color/white" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="29dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/contenedor" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/contenedor" />
+
+    </LinearLayout>
 
 
 

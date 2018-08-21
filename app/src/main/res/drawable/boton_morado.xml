@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:width="350dp"
+        android:height="189dp">
+
+        <shape>
+
+            <solid android:color="@color/moradoOscuro"/>
+            <corners android:radius="9dp"/>
+        </shape>
+    </item>
+
+
+    <item android:height="180dp"
+        android:width="350dp">
+
+
+        <shape>
+            <corners android:radius="14dp"/>
+            <gradient android:angle="180"
+
+                android:startColor="@color/moradoClaro"
+                android:endColor="@color/moradoOscuro"/>
+
+        </shape>
+    </item>
+
+
+    <item
+        android:left="240dp"
+        android:top="39dp"
+        android:height="90dp"
+        android:width="90dp"
+        android:drawable="@drawable/playicon"/>
+
+
+</layer-list>

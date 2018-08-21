@@ -11,6 +11,7 @@
         android:id="@+id/item_carta_figura"
         />
     <ImageView
+        android:id="@+id/item_carta_fondo_tapar"
         android:layout_width="@dimen/ancho_item_carta"
         android:layout_height="@dimen/alto_total_item_carga"
         android:background="@drawable/fondo_tapar_item_carta"

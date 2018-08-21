@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+
+        android:width="@dimen/ancho_item_carta"
+        android:height="@dimen/alto_total_item_carga"
+
+        >
+
+        <shape>
+            <solid android:color="@color/moradoOscuro"/>
+            <corners android:radius="@dimen/radio_item_carta"/>
+
+        </shape>
+    </item>
+
+
+
+    <item
+
+        android:width="@dimen/ancho_item_carta"
+        android:height="@dimen/alto_item_carta"
+
+        >
+
+        <shape>
+            <solid android:color="@color/moradoClaro"/>
+            <corners android:radius="@dimen/radio_item_carta"/>
+
+        </shape>
+    </item>
+
+
+    <item
+
+        android:width="@dimen/ancho_item_carta_figura"
+        android:height="@dimen/alto_item_carta_figura"
+        android:top="10dp"
+        android:gravity="center_horizontal"
+
+        >
+
+        <shape>
+            <solid android:color="@color/moradoOscuro"/>
+            <corners android:radius="@dimen/radio_item_carta"/>
+
+        </shape>
+    </item>
+
+    <item
+
+        android:width="@dimen/ancho_item_carta_figura"
+        android:height="@dimen/ancho_item_carta_figura"
+        android:gravity="center"
+
+        >
+
+        <shape android:shape="oval">
+            <solid android:color="@color/moradoOscuro"/>
+            <corners android:radius="@dimen/radio_item_carta"/>
+
+        </shape>
+    </item>
+
+
+
+
+    <item
+
+        android:width="@dimen/ancho_item_carta_figura"
+        android:height="@dimen/alto_item_carta_figura"
+        android:top="90dp"
+        android:gravity="center_horizontal"
+        >
+
+        <shape>
+            <solid android:color="@color/moradoOscuro"/>
+            <corners android:radius="@dimen/radio_item_carta"/>
+
+        </shape>
+    </item>
+</layer-list>

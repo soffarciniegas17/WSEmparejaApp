@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="alto_total_item_carga">110dp</dimen>
+    <dimen name="alto_item_carta">105dp</dimen>
+    <dimen name="ancho_item_carta">70dp</dimen>
+    <dimen name="ancho_item_carta_figura">60dp</dimen>
+    <dimen name="alto_item_carta_figura">10dp</dimen>
+    <dimen name="radio_item_carta">12dp</dimen>
+
+</resources>

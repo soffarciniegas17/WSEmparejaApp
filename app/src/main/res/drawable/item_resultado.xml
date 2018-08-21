@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:height="@dimen/alto_total_item_resultado"
+        android:width="@dimen/ancho_item_resultado"
+
+        >
+
+        <shape>
+            <solid android:color="@color/moradoOscuro"/>
+            <corners android:radius="@dimen/radio_item_resultado"/>
+
+        </shape>
+    </item>
+
+    <item
+        android:height="@dimen/alto_item_resultado"
+        android:width="@dimen/ancho_item_resultado"
+
+        >
+
+        <shape>
+            <solid android:color="@color/moradoClaro"/>
+            <corners android:radius="@dimen/radio_item_resultado"/>
+
+        </shape>
+    </item>
+
+    <item
+        android:height="@dimen/circulo_item_resultado"
+        android:width="@dimen/circulo_item_resultado"
+        android:gravity="center_vertical"
+
+        >
+
+        <shape>
+            <solid android:color="@color/negro_oscuro"/>
+            <corners android:radius="@dimen/radio_item_resultado"/>
+
+        </shape>
+    </item>
+</layer-list>

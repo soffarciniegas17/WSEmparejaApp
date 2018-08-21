@@ -8,4 +8,10 @@
     <dimen name="alto_item_carta_figura">10dp</dimen>
     <dimen name="radio_item_carta">12dp</dimen>
 
+    <dimen name="alto_total_item_resultado">30dp</dimen>
+    <dimen name="alto_item_resultado">27dp</dimen>
+    <dimen name="ancho_item_resultado">140dp</dimen>
+    <dimen name="radio_item_resultado">15dp</dimen>
+    <dimen name="circulo_item_resultado">25dp</dimen>
+
 </resources>

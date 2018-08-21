@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:background="@color/negro_claro"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:background="@drawable/logoempareja"
+        android:layout_marginBottom="20dp"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="7sp"
+        android:text="PUNTAJE"/>
+
+    <TextView
+        android:id="@+id/final_puntaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_resultado"
+        android:drawableLeft="@drawable/star"
+        android:paddingRight="22dp"
+        android:gravity="center"
+        android:text="00"
+        android:textColor="@android:color/white"
+        />
+
+
+    <TextView
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="7sp"
+        android:text="TIEMPO"/>
+
+    <TextView
+        android:id="@+id/final_tiempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_resultado"
+        android:drawableLeft="@drawable/icono_tiempo"
+        android:paddingRight="22dp"
+        android:gravity="center"
+        android:text="00"
+        android:textColor="@android:color/white"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="12dp"
+        >
+
+        <ImageButton
+            android:id="@+id/fin_bton_home"
+            android:layout_width="100dp"
+            android:onClick="finalBotones"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/fin_bton_compartir"
+            android:layout_width="30dp"
+            android:onClick="finalBotones"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/fin_bton_replay"
+            android:layout_width="100dp"
+            android:onClick="finalBotones"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".Home">
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/fondo"
+    tools:context=".Home">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -19,10 +21,12 @@ tools:context=".Home">
         android:orientation="vertical"
         >
         <TextView
+            android:id="@+id/game_jugador1"
             style="@style/game_nombres_jugadores"
 
             />
         <TextView
+            android:id="@+id/game_puntaje1"
             style="@style/game_nombres_jugadores"
             android:text="0"
             android:textSize="22dp"
@@ -38,10 +42,12 @@ tools:context=".Home">
 
 
         <Chronometer
+            android:id="@+id/game_chronometer"
             style="@style/game_nombres_jugadores"
             android:layout_height="match_parent"
             />
         <TextView
+            android:id="@+id/game_temporizador"
             style="@style/game_nombres_jugadores"
             android:layout_height="match_parent"
             android:text="00"
@@ -57,9 +63,11 @@ tools:context=".Home">
         android:orientation="vertical"
         >
         <TextView
+            android:id="@+id/game_jugador2"
             style="@style/game_nombres_jugadores"
             />
         <TextView
+            android:id="@+id/game_puntaje2"
             style="@style/game_nombres_jugadores"
             android:text="0"
             android:textSize="22dp"
@@ -71,9 +79,23 @@ tools:context=".Home">
 
 </LinearLayout>
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardElevation="14dp"
+        card_view:cardCornerRadius="12dp"
+        >
+
+
+
 <GridView
+    android:numColumns="4"
+    android:padding="3dp"
     android:id="@+id/gridview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
+
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

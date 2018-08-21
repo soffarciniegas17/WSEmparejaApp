@@ -18,5 +18,11 @@
     <color name="verdeOscuro">#197319</color>
     <color name="verdesuave">#01943c</color>
 
+    <color name="negro_claro">#212121</color>
+    <color name="negro_oscuro">#151515</color>
+
+    <color name="gris_claro">#aab6c4</color>
+    <color name="gris_oscuro">#808d9c</color>
+
 
 </resources>

@@ -54,6 +54,12 @@ public class Home extends AppCompatActivity {
         settings.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
 
+        dificultad= new Dialog(this);
+        dificultad.setContentView(R.layout.dialog_dificultad);
+        dificultad.setCanceledOnTouchOutside(false);
+        dificultad.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+
         ingresarNombres();
     }
 
@@ -90,8 +96,48 @@ public class Home extends AppCompatActivity {
 
     public void jugar(View v){
 
-        Intent intent= new Intent(this, Game.class);
-        startActivity(intent);
+        Button b1, b2, b3;
+         b1= findViewById(R.id.ba);
+         b2= findViewById(R.id.bb);
+         b3= findViewById(R.id.bc);
+
+
+         b1.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+               Intent  i= new Intent(Home.this, Game.class);
+               i.putExtra("player1", player1);
+               i.putExtra("player2", player2);
+               i.putExtra("dificultad", 4);
+               startActivity(i);
+               finish();
+             }
+         });
+
+         b2.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent  i= new Intent(Home.this, Game.class);
+                 i.putExtra("player1", player1);
+                 i.putExtra("player2", player2);
+                 i.putExtra("dificultad", 6);
+                 startActivity(i);
+                 finish();
+             }
+         });
+
+         b3.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent  i= new Intent(Home.this, Game.class);
+                 i.putExtra("player1", player1);
+                 i.putExtra("player2", player2);
+                 i.putExtra("dificultad", 8);
+                 startActivity(i);
+                 finish();
+             }
+         });
+
     }
 
 

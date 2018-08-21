@@ -8,7 +8,7 @@
     <color name="moradoClaro">#a941fd</color>
     <color name="moradoOscuro">#6a20bf</color>
 
-    <color name="fondo">#b27fff</color>
+    <color name="fondo">#c59fff</color>
 
     <color name="AmarilloSuave">#ffd34e</color>
     <color name="Amarrillofondo">#d7a717</color>
@@ -23,6 +23,8 @@
 
     <color name="gris_claro">#aab6c4</color>
     <color name="gris_oscuro">#808d9c</color>
+
+    <color name="amarillo">#ffcc23</color>
 
 
 </resources>

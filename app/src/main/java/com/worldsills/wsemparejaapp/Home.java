@@ -172,6 +172,8 @@ public class Home extends AppCompatActivity {
                 scores.dismiss();
             }
         });
+
+        scores.show();
     }
 
     private void defaultScores(){
@@ -268,6 +270,9 @@ public class Home extends AppCompatActivity {
                 settings.dismiss();
             }
         });
+
+
+        settings.show();
 
     }
 

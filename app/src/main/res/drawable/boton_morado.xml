@@ -3,7 +3,7 @@
 
     <item
         android:width="350dp"
-        android:height="149dp">
+        android:height="194dp">
 
         <shape>
 
@@ -13,7 +13,7 @@
     </item>
 
 
-    <item android:height="140dp"
+    <item android:height="180dp"
         android:width="350dp">
 
 

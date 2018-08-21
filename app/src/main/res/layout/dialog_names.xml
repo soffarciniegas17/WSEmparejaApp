@@ -29,7 +29,7 @@
         android:layout_width="199dp"
         android:layout_height="66dp"
         android:backgroundTint="@android:color/white"
-        android:text="Jugador "
+        android:text="Jugador 1"
         android:textColor="@android:color/white"
         android:textStyle="italic" />
 

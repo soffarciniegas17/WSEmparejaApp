@@ -3,7 +3,7 @@
 
     <item
         android:width="350dp"
-        android:height="169dp">
+        android:height="129dp">
 
         <shape>
 
@@ -13,7 +13,7 @@
     </item>
 
 
-    <item android:height="160dp"
+    <item android:height="120dp"
         android:width="350dp">
 
 
@@ -30,7 +30,7 @@
 
     <item
         android:left="240dp"
-        android:top="39dp"
+        android:top="20dp"
         android:height="50dp"
         android:width="50dp"
         android:drawable="@drawable/star"/>
@@ -38,7 +38,7 @@
 
     <item
         android:left="280dp"
-        android:top="76dp"
+        android:top="60dp"
         android:height="50dp"
         android:width="50dp"
         android:drawable="@drawable/star"/>
@@ -46,7 +46,7 @@
 
     <item
         android:left="200dp"
-        android:top="76dp"
+        android:top="60dp"
         android:height="50dp"
         android:width="50dp"
         android:drawable="@drawable/star"/>

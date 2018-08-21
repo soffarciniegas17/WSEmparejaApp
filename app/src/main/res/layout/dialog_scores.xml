@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="350dp"
     android:orientation="vertical"
+    android:layout_gravity="center"
     android:background="@color/fondo_oscuro"
 
     android:layout_height="440dp">
@@ -13,7 +14,7 @@
         android:layout_height="74dp"
         android:textAlignment="center"
         android:textSize="40dp"
-        android:background="@color/AmarilloSuave"
+        android:background="@color/Amarrillofondo"
         android:text="Puntajes" />
 
     <LinearLayout
@@ -23,7 +24,7 @@
         android:orientation="horizontal">
 
         <Button
-
+            android:onClick="ScoresButtons"
             android:id="@+id/beasy"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -33,7 +34,7 @@
             android:textColor="@android:color/white" />
 
         <Button
-
+            android:onClick="ScoresButtons"
             android:id="@+id/bmedio"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -44,6 +45,7 @@
 
 
         <Button
+            android:onClick="ScoresButtons"
             android:id="@+id/bdificil"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -61,21 +63,24 @@
         android:layout_gravity="center"
         android:orientation="horizontal">
 
-
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="130dp"
+            android:background="@drawable/medalla" />
 
 
         <TextView
             android:id="@+id/p1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="JUGADOR UNO \n 233"
+            android:text="JUGADOR"
             android:textColor="@android:color/white"
-            android:textSize="20dp" />
+            android:textSize="25dp" />
 
     </LinearLayout>
 
     <TextView
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:text="JUGADOR UNO \n 233"
         android:id="@+id/p2"

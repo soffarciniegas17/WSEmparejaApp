@@ -4,28 +4,35 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="350dp"
     android:orientation="vertical"
+    android:layout_gravity="center"
     android:gravity="center"
     android:layout_height="wrap_content">
 
 
 
     <Button
+        android:textColor="@android:color/white"
         android:id="@+id/ba"
         android:text="Fácil"
+        android:background="@drawable/anim_contenedor_morado"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
+        android:textColor="@android:color/white"
         android:id="@+id/bb"
-        android:text="Fácil"
+        android:background="@drawable/anim_contenedor_morado"
+        android:text="Medio"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
 
     <Button
-        android:text="Fácil" android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/anim_contenedor_morado"
+        android:text="Dificil" android:layout_marginTop="20dp"
         android:id="@+id/bc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

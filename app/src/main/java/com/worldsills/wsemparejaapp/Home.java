@@ -201,6 +201,7 @@ public class Home extends AppCompatActivity {
             }while (cursor.moveToNext());
         }
     }
+    //
     private void organizar(){
         p1.setText(puntajes[0]);
         p2.setText(puntajes[1]);

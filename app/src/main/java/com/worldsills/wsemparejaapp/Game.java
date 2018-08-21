@@ -32,6 +32,7 @@ public class Game extends AppCompatActivity {
 
     private Long tiempoTemporizador;
 
+    private String nomJugador1, nomJugador2;
 
 
     private final int TAPAR=R.drawable.fondo_tapar_item_carta;
@@ -185,12 +186,31 @@ public class Game extends AppCompatActivity {
                 }
 
                 adapter.notifyDataSetChanged();
-
+                actualizarPantalla();
                 if (verificaPartida())clickCartas();
                 else finPartida();
 
             }
         }.start();
+    }
+    public void actualizarPantalla(){
+        viewPuntaje1.setText(puntaje1+"");
+        viewPuntaje2.setText(puntaje2+"");
+
+        if(turno){
+            viewJugador1.setBackgroundResource(R.color.negro_claro);
+            viewPuntaje1.setBackgroundResource(R.color.negro_claro);
+
+            viewJugador2.setBackgroundResource(R.color.gris_oscuro);
+            viewPuntaje2.setBackgroundResource(R.color.gris_oscuro);
+        }else{
+            viewJugador2.setBackgroundResource(R.color.negro_claro);
+            viewPuntaje2.setBackgroundResource(R.color.negro_claro);
+
+            viewJugador1.setBackgroundResource(R.color.gris_oscuro);
+            viewPuntaje1.setBackgroundResource(R.color.gris_oscuro);
+
+        }
     }
     //Metodo para verificar si ya todas las cartas han desaparedido de la pantalla
     public boolean verificaPartida(){
@@ -219,15 +239,22 @@ public class Game extends AppCompatActivity {
         dialogFinal.setContentView(R.layout.dialog_final);
         dialogFinal.setCanceledOnTouchOutside(false);
 
-        TextView puntaje, tiempo;
+        TextView puntaje, tiempo, nombre;
         puntaje=dialogFinal.findViewById(R.id.final_puntaje);
         tiempo=dialogFinal.findViewById(R.id.final_tiempo);
+        nombre=dialogFinal.findViewById(R.id.final_nombre_jugador);
 
 
-            if (puntaje1 > puntaje2) puntaje.setText(puntaje1 + "");
-            else puntaje.setText(puntaje2+"");
+            if (puntaje1 > puntaje2) {
+                puntaje.setText(puntaje1 + "");
+                nombre.setText(nomJugador1);
+            }
+            else {
+                puntaje.setText(puntaje2+"");
+                nombre.setText(nomJugador2);
+            }
 
-            tiempo.setText(tiempoPartida);
+            tiempo.setText(tiempoPartida+"");
 
             dialogFinal.show();
 
@@ -251,6 +278,11 @@ public class Game extends AppCompatActivity {
         super.onResume();
 
         temporizadorActivado=false;
+        nomJugador1="jugador1";
+        nomJugador2="jugador2";
+
+        viewJugador1.setText(nomJugador1);
+        viewJugador2.setText(nomJugador2);
         cargaCartas();
     }
 

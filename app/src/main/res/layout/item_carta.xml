@@ -6,8 +6,8 @@
 
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/ancho_item_carta"
+        android:layout_height="@dimen/alto_total_item_carga"
         android:id="@+id/item_carta_figura"
         />
     <ImageView

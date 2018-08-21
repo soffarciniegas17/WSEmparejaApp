@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class Home extends AppCompatActivity {
@@ -42,16 +43,33 @@ public class Home extends AppCompatActivity {
         settings.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
 
+        ingresarNombres();
     }
 
 
     private void ingresarNombres(){
-
-        EditText ingreso= names.findViewById(R.id.ingreso);
+        final EditText ingreso= names.findViewById(R.id.ingreso);
+        Button confirmar= names.findViewById(R.id.confirmar);
 
         if(player==1){
            ingreso.setText("Jugador 2");
         }
+
+        confirmar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(player==0){
+                    player1=ingreso.getText().toString();
+                    player=1;
+                    ingresarNombres();
+                } else {
+                    player2= ingreso.getText().toString();
+                    names.dismiss();
+                }
+            }
+        });
+
+        names.show();
 
     }
 

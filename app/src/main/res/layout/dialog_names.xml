@@ -40,6 +40,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="126dp"
         android:layout_height="58dp"
+        android:id="@+id/confirmar"
         android:background="@drawable/anim_contenedor_morado" />
 
 

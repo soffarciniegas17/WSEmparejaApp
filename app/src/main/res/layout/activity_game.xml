@@ -38,6 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="2"
+
         android:orientation="vertical">
 
 
@@ -45,11 +46,13 @@
             android:id="@+id/game_chronometer"
             style="@style/game_nombres_jugadores"
             android:layout_height="match_parent"
+            android:background="@color/moradoOscuro"
             />
         <TextView
             android:id="@+id/game_temporizador"
             style="@style/game_nombres_jugadores"
             android:layout_height="match_parent"
+            android:background="@color/moradoOscuro"
             android:text="00"
             />
 

@@ -20,12 +20,52 @@ tools:context=".Home">
         >
         <TextView
             style="@style/game_nombres_jugadores"
+
+            />
+        <TextView
+            style="@style/game_nombres_jugadores"
+            android:text="0"
+            android:textSize="22dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+
+        <Chronometer
+            style="@style/game_nombres_jugadores"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            style="@style/game_nombres_jugadores"
+            android:layout_height="match_parent"
+            android:text="00"
             />
 
     </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        >
+        <TextView
+            style="@style/game_nombres_jugadores"
+            />
+        <TextView
+            style="@style/game_nombres_jugadores"
+            android:text="0"
+            android:textSize="22dp"
+            />
 
+    </LinearLayout>
 
 
 

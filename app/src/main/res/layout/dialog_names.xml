@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="300dp"
+    android:background="@color/fondo_oscuro"
+    android:layout_height="300dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/moradoClaro"
+        android:text="Ingresar nombres"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ussers"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <EditText
+        android:paddingTop="40dp"
+        android:textStyle="italic"
+        android:textColor="@android:color/white"
+        android:layout_width="199dp"
+        android:text="Jugador "
+
+        android:backgroundTint="@android:color/white"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:textColor="@android:color/white"
+        android:text="Confirmar"
+        android:layout_marginTop="10dp"
+        android:layout_width="126dp"
+        android:layout_height="58dp"
+        android:background="@drawable/anim_contenedor_morado" />
+
+
+
+</LinearLayout>

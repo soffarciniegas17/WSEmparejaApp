@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:orientation="vertical"
+    android:background="@color/fondo_oscuro"
+
+    android:layout_height="440dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:background="@color/AmarilloSuave"
+        android:text="Puntajes" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+
+            android:id="@+id/beasy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/anim_contenedor_ama"
+            android:text="Fácil"
+            android:textColor="@android:color/white" />
+
+        <Button
+
+            android:id="@+id/bmedio"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/anim_contenedor_ama"
+            android:text="Medio"
+            android:textColor="@android:color/white" />
+
+
+        <Button
+            android:id="@+id/bdificil"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/anim_contenedor_ama"
+            android:text="Dificil"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/medalla" />
+
+
+        <TextView
+            android:id="@+id/p1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JUGADOR UNO \n 233"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:text="JUGADOR UNO \n 233"
+        android:id="@+id/p2"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/p3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="JUGADOR UNO \n 233"
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:text="JUGADOR UNO \n 233"
+        android:id="@+id/p4"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:text="JUGADOR UNO \n 233"
+        android:id="@+id/p5"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="52dp"
+        android:layout_height="45dp"
+        android:background="@drawable/atras" />
+
+
+</LinearLayout>

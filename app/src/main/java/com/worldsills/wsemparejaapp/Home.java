@@ -10,6 +10,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -57,6 +58,7 @@ public class Home extends AppCompatActivity {
         dificultad= new Dialog(this);
         dificultad.setContentView(R.layout.dialog_dificultad);
         dificultad.setCanceledOnTouchOutside(false);
+        dificultad.setCancelable(true);
         dificultad.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
 
@@ -96,10 +98,11 @@ public class Home extends AppCompatActivity {
 
     public void jugar(View v){
 
+        dificultad.show();
         Button b1, b2, b3;
-         b1= findViewById(R.id.ba);
-         b2= findViewById(R.id.bb);
-         b3= findViewById(R.id.bc);
+         b1= dificultad.findViewById(R.id.ba);
+         b2= dificultad.findViewById(R.id.bb);
+         b3= dificultad.findViewById(R.id.bc);
 
 
          b1.setOnClickListener(new View.OnClickListener() {
@@ -110,6 +113,8 @@ public class Home extends AppCompatActivity {
                i.putExtra("player2", player2);
                i.putExtra("dificultad", 4);
                startActivity(i);
+
+                 dificultad.dismiss();
                finish();
              }
          });
@@ -122,6 +127,7 @@ public class Home extends AppCompatActivity {
                  i.putExtra("player2", player2);
                  i.putExtra("dificultad", 6);
                  startActivity(i);
+                 dificultad.dismiss();
                  finish();
              }
          });
@@ -134,6 +140,8 @@ public class Home extends AppCompatActivity {
                  i.putExtra("player2", player2);
                  i.putExtra("dificultad", 8);
                  startActivity(i);
+
+                 dificultad.dismiss();
                  finish();
              }
          });
@@ -278,6 +286,13 @@ public class Home extends AppCompatActivity {
 
         editor.apply();
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        finish();
     }
 
     @Override

@@ -2,8 +2,10 @@ package com.worldsills.wsemparejaapp;
 
 import android.app.Dialog;
 import android.content.ClipData;
+import android.content.SharedPreferences;
 import android.os.CountDownTimer;
 import android.os.SystemClock;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -46,7 +48,9 @@ public class Game extends AppCompatActivity {
 
         Bundle datos=getIntent().getExtras();
         if(datos!=null){
-            dificultad=datos.getInt("");
+            dificultad=(datos.getInt("dificultad"))*2;
+            nomJugador1=datos.getString("player1");
+            nomJugador2=datos.getString("player2");
         }else{
             dificultad=8;
 
@@ -166,8 +170,10 @@ public class Game extends AppCompatActivity {
 
                     if (turno){
                         puntaje1+=100;
+
                     }else{
                         puntaje2+=100;
+
                     }
 
 
@@ -180,7 +186,7 @@ public class Game extends AppCompatActivity {
                         puntaje1-=2;
                         turno=false;
                     }else{
-                        puntaje1-=2;
+                        puntaje2-=2;
                         turno=true;
                     }
                 }
@@ -260,7 +266,9 @@ public class Game extends AppCompatActivity {
 
     }
     public void guardarDatos(){
-
+        DataBaseRegistros db=new DataBaseRegistros(this);
+        db.guardarDatos(nomJugador1,puntaje1,tiempoPartida,dificultad/2+"");
+        db.guardarDatos(nomJugador2,puntaje2,tiempoPartida,dificultad/2+"");
     }
     public void finalBotones(View v){
         switch (v.getId()){
@@ -273,16 +281,42 @@ public class Game extends AppCompatActivity {
         }
 
     }
+    public void timerPartida(){
+        timerPartida=new CountDownTimer(tiempoTemporizador,1000) {
+            @Override
+            public void onTick(long l) {
+                tiempoPartida=(int)l/1000;
+                if (tiempoPartida<9)viewTemporizador.setText("0"+tiempoPartida);
+                else viewTemporizador.setText(""+tiempoPartida);
+            }
+
+            @Override
+            public void onFinish() {
+                finPartida();
+            }
+        }.start();
+    }
+
 
     public void onResume(){
         super.onResume();
 
-        temporizadorActivado=false;
-        nomJugador1="jugador1";
-        nomJugador2="jugador2";
+        SharedPreferences datos= PreferenceManager.getDefaultSharedPreferences(this);
+
+        temporizadorActivado=datos.getBoolean("modo",false);
+        tiempoTemporizador=(long)(datos.getInt("tiempo",30000));
+
+        if (temporizadorActivado){
+            viewChronometer.setHeight(0);
+            timerPartida();
+        }
+
 
         viewJugador1.setText(nomJugador1);
         viewJugador2.setText(nomJugador2);
+
+
+        turno=new Random().nextBoolean();
         cargaCartas();
     }
 

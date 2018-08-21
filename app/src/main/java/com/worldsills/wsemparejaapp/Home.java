@@ -185,22 +185,22 @@ public class Home extends AppCompatActivity {
     }
 
 
-  /*  private void ConsultaDeDatos(){
-        DataBase db  = new DataBase(this);
-        Cursor cursor= db.cargar("");
+   private void ConsultaDeDatos(String di){
+        DataBaseRegistros db  = new DataBaseRegistros(this);
+        Cursor cursor= db.cargarDatos(di);
         int i=0;
         if(cursor.moveToFirst()) {
 
             do {
                 if(i==0){
-                    puntajes[i]= cursor.getString(0)+"   " +cursor.getInt(0);
+                    puntajes[i]= cursor.getString(0)+"   " +cursor.getInt(1);
                 } else {
                     puntajes[i]= (i+1)+ ".    Jugador     0";
                 }
                 i++;
             }while (cursor.moveToNext());
         }
-    }*/
+    }
     private void organizar(){
         p1.setText(puntajes[0]);
         p2.setText(puntajes[1]);

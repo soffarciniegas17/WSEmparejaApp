@@ -11,48 +11,42 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         >
 
         <TextView
             android:textAlignment="center"
             android:id="@+id/tp1"
-            android:layout_width="159dp"
-            android:layout_height="43dp"
+            android:layout_width="164dp"
+            android:layout_height="match_parent"
             android:background="@color/amarillo"
             android:textSize="18dp" />
 
+        <Button
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boton_verde_click"
+            android:onClick="configuracion" />
+
         <TextView
-            android:textAlignment="center"
             android:id="@+id/tp2"
-            android:layout_width="170dp"
+            android:layout_width="164dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="43dp"
             android:background="@color/AmarilloSuave"
+            android:textAlignment="center"
             android:textSize="18dp" />
 
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+
 
         <ImageView
             android:layout_width="267dp"
             android:layout_height="118dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/logoem" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:background="@drawable/anim_boton_verde"
-            android:onClick="configuracion" />
-
-    </LinearLayout>
 
     <Button
 

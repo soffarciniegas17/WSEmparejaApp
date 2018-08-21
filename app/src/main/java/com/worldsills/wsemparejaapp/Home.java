@@ -161,7 +161,7 @@ public class Home extends AppCompatActivity {
 
         puntajes= new String[5];
         defaultScores();
-       // ConsultaDedatos();
+        ConsultaDeDatos(mododif);
         organizar();
 
         Button salir = scores.findViewById(R.id.cancel);
@@ -195,7 +195,7 @@ public class Home extends AppCompatActivity {
 
             do {
                 if(i==0){
-                    puntajes[i]= cursor.getString(0)+"   " +cursor.getInt(1);
+                    puntajes[i]= cursor.getString(0)+" \n " +cursor.getInt(1);
                 } else {
                     puntajes[i]= (i+1)+ ".    Jugador     0";
                 }
@@ -203,7 +203,7 @@ public class Home extends AppCompatActivity {
             }while (cursor.moveToNext());
         }
     }
-    //
+
     private void organizar(){
         p1.setText(puntajes[0]);
         p2.setText(puntajes[1]);
@@ -219,7 +219,7 @@ public class Home extends AppCompatActivity {
                 mododif="4";
 
                 defaultScores();
-                //ConsultaDeDatos();
+                ConsultaDeDatos(mododif);
                 organizar();
                 break;
             case R.id.bmedio:
@@ -227,7 +227,7 @@ public class Home extends AppCompatActivity {
                 mododif="6";
 
                 defaultScores();
-                //ConsultaDeDatos();
+                ConsultaDeDatos(mododif);
                 organizar();
                 break;
             case R.id.bdificil:

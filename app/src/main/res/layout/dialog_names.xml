@@ -29,7 +29,7 @@
         android:textColor="@android:color/white"
         android:layout_width="199dp"
         android:text="Jugador "
-
+        android:id="@+id/ingreso"
         android:backgroundTint="@android:color/white"
         android:layout_height="wrap_content" />
 

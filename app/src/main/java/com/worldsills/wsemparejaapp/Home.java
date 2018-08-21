@@ -41,19 +41,17 @@ public class Home extends AppCompatActivity {
         settings.setCanceledOnTouchOutside(false);
         settings.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-        scores= new Dialog(this);
-        scores.setContentView(R.layout.dialog_scores);
-        scores.setCanceledOnTouchOutside(false);
-        scores.setCancelable(false);
-        scores.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
     }
 
 
     private void ingresarNombres(){
 
+        EditText ingreso= names.findViewById(R.id.ingreso);
 
-
+        if(player==1){
+           ingreso.setText("Jugador 2");
+        }
 
     }
 

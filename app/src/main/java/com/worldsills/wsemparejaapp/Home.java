@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
@@ -164,7 +165,7 @@ public class Home extends AppCompatActivity {
         ConsultaDeDatos(mododif);
         organizar();
 
-        Button salir = scores.findViewById(R.id.cancel);
+        ImageButton salir = scores.findViewById(R.id.cancel);
 
         salir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -197,7 +198,7 @@ public class Home extends AppCompatActivity {
                 if(i==0){
                     puntajes[i]= cursor.getString(0)+" \n " +cursor.getInt(1);
                 } else {
-                    puntajes[i]= (i+1)+ ".    Jugador     0";
+                    puntajes[i]= (i+1)+". "+cursor.getString(0)+": " +cursor.getInt(1);
                 }
                 i++;
             }while (cursor.moveToNext());
@@ -234,6 +235,7 @@ public class Home extends AppCompatActivity {
                 mododif="8";
 
                 defaultScores();
+                ConsultaDeDatos(mododif);
                 //ConsultaDeDatos();
                 organizar();
 

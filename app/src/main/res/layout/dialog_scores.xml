@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="350dp"
+    android:layout_width="300dp"
     android:orientation="vertical"
     android:layout_gravity="center"
     android:background="@color/fondo_oscuro"
 
     android:layout_height="440dp">
 
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="74dp"
-        android:textAlignment="center"
-        android:textSize="40dp"
-        android:background="@color/Amarrillofondo"
-        android:text="Puntajes" />
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/cancel"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_back"
+
+            android:background="@color/Amarrillofondo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:paddingRight="38dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:background="@color/Amarrillofondo"
+            android:text="PUNTAJES" />
+
+
+    </LinearLayout>
+
+
 
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -27,7 +47,7 @@
             android:id="@+id/beasy"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="5dp"
             android:background="@drawable/anim_contenedor_ama"
             android:onClick="ScoresButtons"
             android:text="Fácil"
@@ -38,7 +58,7 @@
             android:id="@+id/bmedio"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="5dp"
             android:background="@drawable/anim_contenedor_ama"
             android:text="Medio"
             android:textColor="@android:color/white" />
@@ -49,7 +69,7 @@
             android:id="@+id/bdificil"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="5dp"
             android:background="@drawable/anim_contenedor_ama"
             android:text="Dificil"
             android:textColor="@android:color/white" />
@@ -70,7 +90,9 @@
 
 
         <TextView
+            android:layout_marginTop="30dp"
             android:id="@+id/p1"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="JUGADOR"
@@ -79,53 +101,58 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:text="JUGADOR UNO \n 233"
-        android:id="@+id/p2"
-        android:textColor="@android:color/white"
-        android:textSize="18dp"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_marginTop="5dp"
-        android:id="@+id/p3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="JUGADOR UNO \n 233"
-        android:textColor="@android:color/white"
-        android:textSize="18dp" />
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+
+            android:text="JUGADOR UNO \n 233"
+            android:id="@+id/p2"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/p3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="JUGADOR UNO \n 233"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
 
 
-    <TextView
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        android:text="JUGADOR UNO \n 233"
-        android:id="@+id/p4"
-        android:textColor="@android:color/white"
-        android:textSize="18dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="5dp"
 
-    <TextView
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        android:text="JUGADOR UNO \n 233"
-        android:id="@+id/p5"
-        android:textColor="@android:color/white"
-        android:textSize="18dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            android:text="JUGADOR UNO \n 233"
+            android:id="@+id/p4"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+
+            android:text="JUGADOR UNO \n 233"
+            android:id="@+id/p5"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
 
-    <Button
-        android:id="@+id/cancel"
-        android:layout_width="52dp"
-        android:layout_height="45dp"
-        android:background="@drawable/atras" />
+
+
+    </LinearLayout>
+
+
 
 
 </LinearLayout>

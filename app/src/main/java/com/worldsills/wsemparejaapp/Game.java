@@ -49,6 +49,7 @@ public class Game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+
         Bundle datos=getIntent().getExtras();
         if(datos!=null){
             dificultad=(datos.getInt("dificultad"))*2;
@@ -339,11 +340,13 @@ public class Game extends AppCompatActivity {
         SharedPreferences datos= PreferenceManager.getDefaultSharedPreferences(this);
 
         temporizadorActivado=datos.getBoolean("modo",false);
-        tiempoTemporizador=(long)(datos.getInt("tiempo",30000));
+        tiempoTemporizador=(long)(datos.getInt("tiempo",30))*1000;
 
         if (temporizadorActivado){
-            viewChronometer.setHeight(0);
+           viewChronometer.getLayoutParams().height=0;
             timerPartida();
+        }else{
+            viewChronometer.start();
         }
 
         turno=new Random().nextBoolean();

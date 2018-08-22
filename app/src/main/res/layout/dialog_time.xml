@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
     android:layout_height="270dp"
     android:layout_gravity="center"
     android:background="@color/fondo_oscuro"
@@ -10,10 +11,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/verdesuave"
-        android:text="Ingresar tiempo"
+        android:background="@color/moradoOscuro"
+        android:text="INGRESA TIEMPO"
+        android:textColor="@android:color/white"
+        android:padding="5dp"
+        android:textStyle="bold"
+
+
         android:textAlignment="center"
-        android:textSize="40dp" />
+        android:textSize="15sp" />
 
 
     <EditText

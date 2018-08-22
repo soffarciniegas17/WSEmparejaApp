@@ -2,12 +2,11 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:width="60dp"
-        android:height="68dp">
+        >
 
         <shape>
 
-            <solid android:color="@color/verdeOscuro"/>
+            <solid android:color="@color/moradoClaro"/>
 
         </shape>
     </item>
@@ -15,10 +14,9 @@
 
 
     <item
-        android:height="50dp"
-        android:left="8dp"
-        android:top="7dp"
-        android:width="50dp"
+        android:height="30dp"
+        android:gravity="center"
+        android:width="30dp"
         android:drawable="@drawable/settings"/>
 
 

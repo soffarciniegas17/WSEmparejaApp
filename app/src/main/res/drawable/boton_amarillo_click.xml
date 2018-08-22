@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:width="350dp"
-        android:height="129dp">
-
-        <shape>
-
-            <solid android:color="@color/Amarrillofondo"/>
-            <corners android:radius="14dp"/>
-        </shape>
-    </item>
 
 
-    <item android:height="120dp"
-        android:width="350dp">
+
+    <item>
 
 
         <shape>
@@ -23,32 +13,15 @@
                 android:startColor="@color/AmarilloSuave"
                 android:endColor="@color/Amarrillofondo"/>
 
-            <corners android:radius="14dp"/>
+
         </shape>
     </item>
 
 
     <item
-        android:left="240dp"
-        android:top="20dp"
-        android:height="50dp"
-        android:width="50dp"
-        android:drawable="@drawable/star"/>
-
-
-    <item
-        android:left="280dp"
-        android:top="60dp"
-        android:height="50dp"
-        android:width="50dp"
-        android:drawable="@drawable/star"/>
-
-
-    <item
-        android:left="200dp"
-        android:top="60dp"
-        android:height="50dp"
-        android:width="50dp"
+        android:gravity="end|center_vertical"
+        android:height="75dp"
+        android:width="75dp"
         android:drawable="@drawable/star"/>
 
 </layer-list>

@@ -329,8 +329,8 @@ public class Home extends AppCompatActivity {
     private boolean estadoNombres;
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
+    protected void onResume() {
+        super.onResume();
         SharedPreferences sharedPreferences= PreferenceManager.getDefaultSharedPreferences(this);
 
         modo= sharedPreferences.getBoolean("modo", false);

@@ -28,13 +28,26 @@
             android:textSize="18dp" />
 
 
-
-        <Button
-            android:layout_weight="2"
+        <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/anim_boton_verde"
+            android:layout_weight="2"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="7dp"
+
+
+            >
+            <ImageView
+
+            android:layout_width="match_parent"
+            android:src="@drawable/settings"
+            android:layout_height="match_parent"
+            android:background="@color/moradoOscuro"
             android:onClick="configuracion" />
+
+
+        </android.support.v7.widget.CardView>
+
 
 
         <TextView

@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="300dp"
+    android:id="@+id/layout_ingresa_tiempo"
     android:layout_height="270dp"
     android:layout_gravity="center"
     android:background="@color/fondo_oscuro"

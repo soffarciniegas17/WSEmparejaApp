@@ -5,6 +5,7 @@
     android:background="@color/negro_claro"
     android:layout_gravity="center"
     android:gravity="center"
+    android:id="@+id/layout_final_juego"
     android:layout_height="wrap_content">
 
 
@@ -26,12 +27,6 @@
 
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:textSize="7sp"
-        android:text="PUNTAJE"/>
 
     <TextView
         android:id="@+id/final_puntaje"
@@ -48,13 +43,6 @@
 
     <TextView
         android:layout_marginTop="12dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:textSize="7sp"
-        android:text="TIEMPO"/>
-
-    <TextView
         android:id="@+id/final_tiempo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,18 +66,28 @@
         <ImageButton
             android:id="@+id/fin_bton_home"
             android:layout_width="100dp"
+
             android:onClick="finalBotones"
+            android:background="@drawable/anim_contenedor_morado"
+            android:src="@drawable/icon_home"
             android:layout_height="wrap_content" />
         <ImageButton
             android:id="@+id/fin_bton_compartir"
-            android:layout_width="30dp"
+            android:layout_width="wrap_content"
             android:onClick="finalBotones"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/anim_contenedor_morado"
+            android:src="@drawable/icon_compartir"
+            android:padding="7dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
         <ImageButton
             android:id="@+id/fin_bton_replay"
             android:layout_width="100dp"
             android:onClick="finalBotones"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/anim_contenedor_morado"
+            android:src="@drawable/icon_replay"/>
     </LinearLayout>
 
 </LinearLayout>

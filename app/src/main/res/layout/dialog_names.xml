@@ -5,6 +5,7 @@
     android:gravity="center_horizontal"
     android:layout_gravity="center"
     android:layout_width="300dp"
+    android:id="@+id/layout_ingresa_nombres"
     android:background="@color/fondo_oscuro"
     android:layout_height="300dp">
 

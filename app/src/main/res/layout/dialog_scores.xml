@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:background="@color/fondo_oscuro"
-
+    android:id="@+id/layout_scores"
     android:layout_height="440dp">
 
     <LinearLayout

@@ -15,6 +15,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.Chronometer;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -278,6 +279,11 @@ public class Game extends AppCompatActivity {
         puntaje=dialogFinal.findViewById(R.id.final_puntaje);
         tiempo=dialogFinal.findViewById(R.id.final_tiempo);
         nombre=dialogFinal.findViewById(R.id.final_nombre_jugador);
+
+        LinearLayout layoutFinal=dialogFinal.findViewById(R.id.layout_final_juego);
+        Animation animation=AnimationUtils.loadAnimation(this,R.anim.aparecer);
+        animation.setFillAfter(true);
+        layoutFinal.startAnimation(animation);
 
 
             if (puntaje1 > puntaje2) {

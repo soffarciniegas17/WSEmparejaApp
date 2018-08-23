@@ -11,9 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
@@ -56,18 +58,24 @@ public class Home extends AppCompatActivity {
         settings.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
 
-        dificultad= new Dialog(this);
+        dificultad= new Dialog(this, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
         dificultad.setContentView(R.layout.dialog_dificultad);
         dificultad.setCanceledOnTouchOutside(false);
         dificultad.setCancelable(true);
         dificultad.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
 
-        ingresarNombres();
+
+
     }
 
 
     private void ingresarNombres(){
+        LinearLayout layoutDialog=names.findViewById(R.id.layout_ingresa_nombres);
+        Animation animation=AnimationUtils.loadAnimation(this,R.anim.aparecer);
+        animation.setFillAfter(true);
+        layoutDialog.startAnimation(animation);
+
         final EditText ingreso= names.findViewById(R.id.ingreso);
         Button confirmar= names.findViewById(R.id.confirmar);
 
@@ -94,6 +102,7 @@ public class Home extends AppCompatActivity {
         });
 
         names.show();
+        estadoNombres=true;
 
     }
 
@@ -151,6 +160,11 @@ public class Home extends AppCompatActivity {
 
 
     public void ScoresShow(View v){
+        LinearLayout layoutDialog=scores.findViewById(R.id.layout_scores);
+        Animation animation=AnimationUtils.loadAnimation(this,R.anim.aparecer);
+        animation.setFillAfter(true);
+        layoutDialog.startAnimation(animation);
+
         p1= scores.findViewById(R.id.p1);
         p2= scores.findViewById(R.id.p2);
         p3= scores.findViewById(R.id.p3);
@@ -192,6 +206,7 @@ public class Home extends AppCompatActivity {
         DataBaseRegistros db  = new DataBaseRegistros(this);
         Cursor cursor= db.cargarDatos(di);
         int i=0;
+        if (cursor==null)return;
         if(cursor.moveToFirst()) {
 
             do {
@@ -245,6 +260,11 @@ public class Home extends AppCompatActivity {
 
     private boolean modo;
     public void configuracion(View v){
+        LinearLayout layoutDialog=settings.findViewById(R.id.layout_ingresa_tiempo);
+        Animation animation=AnimationUtils.loadAnimation(this,R.anim.aparecer);
+        animation.setFillAfter(true);
+        layoutDialog.startAnimation(animation);
+
        final  EditText tiempoingreso = settings.findViewById(R.id.time);
        final TextView estado = settings.findViewById(R.id.estado);
 
@@ -290,18 +310,23 @@ public class Home extends AppCompatActivity {
 
         editor.putInt("tiempo", tiempo);
         editor.putBoolean("modo", modo);
+        editor.putBoolean("estado_nombres",estadoNombres);
 
 
         editor.apply();
 
     }
 
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
 
+
+
         finish();
     }
+    private boolean estadoNombres;
 
     @Override
     protected void onRestart() {
@@ -310,6 +335,10 @@ public class Home extends AppCompatActivity {
 
         modo= sharedPreferences.getBoolean("modo", false);
         tiempo= sharedPreferences.getInt("tiempo", 0);
+        estadoNombres= sharedPreferences.getBoolean("estado_nombres", false);
+
+        if (!estadoNombres)ingresarNombres();
+
 
     }
 }
